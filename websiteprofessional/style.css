@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: beige;
+    border: 5px solid black;
+}
+.box1{
+   width: 350px;
+   height: 80px;
+    background-color: blueviolet;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    /* animation: rightMovement; */
+    position: relative;
+   /*  animation-duration: 5s;
+    animation-iteration-count: 1;
+    /* animation-delay: 2s; */
+    /* animation-timing-function:cubic-bezier(0.5,0.3,0.7,0.9); */
+    /* animation-timing-function: linear; */
+    /* animation-direction: alternate; */
+    /* animation-fill-mode: both;
+    animation: grow 2s; */ 
+
+    /* @keyframes duration | easing-function | delay |
+iteration-count | direction | fill-mode | play-state | name */
+    animation: 3s ease 2s infinite alternate none running rightMovement;
+}
+@keyframes rightMovement{
+    from{
+        top: 0;
+        left: 0;
+    }
+    to
+    {
+        top: 0;
+        left: 1350px;
+    }
+}
+/* @keyframes grow {
+    from {
+      transform: scale(1);
+      background-color: red;
+    }
+    to {
+      transform: scale(2);
+      background-color: blue;
+    }
+  } */
+
+  .box2{
+    width: 350px;
+    height: 80px;
+     background-color: blueviolet;
+     border: 3px solid black;
+     border-radius: 10px;
+     margin: 10px;
+    
+     position: relative;
+     animation: 3s ease-in 1s infinite alternate none running leftMovement;
+  }
+  @keyframes leftMovement{
+    from{
+        top: 680px;
+        left: 1350px;
+    }
+    to
+    {
+        top: 680px;
+        left: 0;
+    }
+}
+.circle{
+    width: 100px;
+    height: 100px;
+     background-color: blueviolet;
+     border: 3px solid black;
+     border-radius: 50px;
+     margin: 10px;
+     /* animation: rightMovement; */
+     position: relative;
+     animation: 10s ease-in-out 0s infinite alternate-reverse none running circleMovement;
+     top: 30%;
+     left: 40%;
+}
+     @keyframes circleMovement{
+    0%{
+        top: 1%;
+        left: 5%;
+    }
+    30%{
+        top: 5%;
+        left: 90%;
+    }
+    60%{
+        top: 70%;
+        left: 10%;
+    }
+    100%{
+        top: 75%;
+        left: 90%;
+    }
+}
